@@ -94,7 +94,7 @@ pipeline {
 
         stage('Remove Unused docker image') {
           steps {
-            sh "docker rmi registry/swaroopscontainer:V$BUILD_NUMBER"
+            sh "docker rmi $registry:V$BUILD_NUMBER"
           }
         }
 
